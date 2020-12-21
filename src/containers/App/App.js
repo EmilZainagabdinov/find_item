@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import './App.css';
-import GameField from "./components/GameField/GameField";
-import ActionButton from "./components/ActionButton/ActionButton";
-import TriesCounter from "./components/TriesCounter/TriesCounter";
+import GameField from "../../components/GameField/GameField";
+import ActionButton from "../../components/ActionButton/ActionButton";
+import TriesCounter from "../../components/TriesCounter/TriesCounter";
 
 const App = () => {
   const [gameField, setGameField] = useState([]);
