@@ -2,37 +2,63 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.GameField {
+  width: 300px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 15px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.FieldUnit {
+  width: 46px;
+  height: 46px;
+  background: grey;
+  margin: 2px 2px;
+  float: left;
+  border-radius: 5px;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.FieldUnit_clicked {
+  background-color: #ddd;
+  z-index: -2;
 }
 
-.App-link {
-  color: #61dafb;
+.Treasure {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: gold;
+  color: darkgoldenrod;
+  border: 2px solid darkgoldenrod;
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*.ActionButton {*/
+/*  margin-top: 30px;*/
+/*  margin-bottom: 30px;*/
+/*  height: 30px;*/
+/*  padding: 0 20px;*/
+/*  font-size: 18px;*/
+/*  font-weight: bold;*/
+/*  color: #fff;*/
+/*  border: none;*/
+/*  border-radius: 5px;*/
+/*}*/
+
+/*.ActionButton_start {*/
+/*  background-color: steelblue;*/
+/*}*/
+
+/*.ActionButton_reset {*/
+/*  background-color: firebrick;*/
+/*}*/
