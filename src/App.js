@@ -1,11 +1,13 @@
 import React, {useState} from "react";
 import './App.css';
 import GameField from "./components/GameField/GameField";
-import Button from "./components/Button/Button";
+import ActionButton from "./components/ActionButton/ActionButton";
+import TriesCounter from "./components/TriesCounter/TriesCounter";
 
 const App = () => {
   const [gameField, setGameField] = useState([]);
   const [showGameField, setShowGameField] = useState(false);
+  const [triesCounter, setTriesCounter] = useState(0);
 
   const createFieldUnits = () => {
     const fieldArray = [];
@@ -18,6 +20,7 @@ const App = () => {
     fieldArray[treasureIndex].treasure = true;
 
     setGameField(fieldArray);
+    setTriesCounter(0);
   };
 
   const showField = () => {
@@ -33,6 +36,8 @@ const App = () => {
     gameFieldCopy[index] = unitCopy;
 
     setGameField(gameFieldCopy);
+
+    setTriesCounter(triesCounter + 1);
   };
 
   let field = null;
@@ -40,13 +45,14 @@ const App = () => {
   if (showGameField) {
     field = [
         <GameField gameField={gameField} onUnitClick={unitClick} />,
-        // <Button action="Reset" createFieldUnits={createFieldUnits} />
+        <TriesCounter tries={triesCounter} />,
+        <ActionButton action="Reset" createFieldUnits={createFieldUnits} />
         ];
   }
 
   return (
     <div className="App">
-      <Button action="Start" createFieldUnits={createFieldUnits} showField={showField} />
+      <ActionButton action="Start" createFieldUnits={createFieldUnits} showField={showField} />
       {field}
     </div>
   );
