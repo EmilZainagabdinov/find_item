@@ -1,5 +1,6 @@
 import React from 'react';
 import FieldUnit from "../FieldUnit/FieldUnit";
+import './GameField.css';
 
 const GameField = props => {
   const fieldUnits = props.gameField.map(unit => (
