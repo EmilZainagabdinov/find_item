@@ -1,0 +1,20 @@
+.ActionButton {
+  height: 30px;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.ActionButton_start {
+  background-color: steelblue;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.ActionButton_reset {
+  background-color: firebrick;
+  margin-top: 15px ;
+}

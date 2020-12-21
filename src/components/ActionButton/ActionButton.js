@@ -1,6 +1,7 @@
 import React from 'react';
+import './ActionButton.css'
 
-const Button = props => {
+const ActionButton = props => {
   let action = null;
   const buttonClasses = ["ActionButton"];
 
@@ -19,14 +20,13 @@ const Button = props => {
   }
 
   return (
-      <>
-        <Button
-            className={buttonClasses.join(" ")}
-            onClick={action}>
-          {props.action}
-        </Button>
-      </>
+      <button
+          className={buttonClasses.join(" ")}
+          onClick={action}
+      >
+        {props.action}
+      </button>
   );
 };
 
-export default Button;
+export default ActionButton;
